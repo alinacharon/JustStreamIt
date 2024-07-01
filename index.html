@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo à la Demande</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/src/logo/logo.svg" alt="JustStreamIt">
+        </div>
+        <nav>
+            <ul>
+                <li class="hide-on-mobile"><a href="#">Vidéos à la demande</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="best-movie">
+            <h2>Meilleur film</h2>
+            <div class="show_best_movie">
+                <img id="best-movie-image" src="" alt="Meilleur Film">
+                <div class="movie-info">
+                    <h3 id="best-movie-title">Titre du Film</h3>
+                    <p id="best-movie-description">Description du Film</p>
+                    <button class="details-button" id="best-movie-details-button" data-movie="">Détails</button>
+                </div>
+            </div>
+        </section>
+        <section class="category">
+            <h2>Mystery</h2>
+            <div class="category-wrapper">
+                <button class="arrow left" id="mystery-left-arrow">&#9664;</button>
+                <div class="movies-grid" id="mystery-movies-grid">
+                </div>
+                <button class="arrow right" id="mystery-right-arrow">&#9654;</button>
+            </div>
+        </section>
+      
+        <section class="category">
+            <h2>Action</h2>
+            <div class="category-wrapper">
+                <button class="arrow left" id="action-left-arrow">&#9664;</button>
+                <div class="movies-grid" id="action-movies-grid">
+                </div>
+                <button class="arrow right" id="action-right-arrow">&#9654;</button>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Animation</h2>
+            <div class="category-wrapper">
+                <button class="arrow left" id="animation-left-arrow">&#9664;</button>
+                <div class="movies-grid" id="animation-movies-grid">
+                </div>
+                <button class="arrow right" id="animation-right-arrow">&#9654;</button>
+            </div>
+        </section>
+        <section class="other-categories">
+            <h2>Autres:</h2>
+            <select id="category-select">
+            </select>
+            <div class="category-wrapper">
+                <button class="arrow left" id="other-left-arrow">&#9664;</button>
+                <div class="movies-grid" id="other-movies-grid">
+                </div>
+                <button class="arrow right" id="other-right-arrow">&#9654;</button>
+            </div>
+        </section>
+    </main>
+    
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Image du film">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <p><strong>Réalisateurs:</strong> <span id="modal-directors"></span></p>
+                <p><strong>Distribution:</strong> <span id="modal-cast"></span></p>
+                <button class="hide-on-mobile" id="close-modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+<script src="/src/img/no-picture.jpg"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

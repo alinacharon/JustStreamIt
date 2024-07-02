@@ -28,8 +28,9 @@
                 <div class="movie-info">
                     <h3 id="best-movie-title">Titre du Film</h3>
                     <p id="best-movie-description">Description du Film</p>
-                    <button class="details-button" id="best-movie-details-button" data-movie="">Détails</button>
+                    
                 </div>
+                <button class="details-button", class="hide-on-mobile", id="best-movie-details-button"  >Détails</button>
             </div>
         </section>
         <section class="category">
@@ -77,12 +78,18 @@
     <div id="movie-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
+           
+             <div class="modal-header">
+                 <h2 id="modal-title"></h2>
+                 <p><span id="movie-year"></span> - <span id="movie-genre"></span></p>
+                 <p><span id="movie-duration"></span> minutes (<span id="movie-countries"></span>)</p>
+                 <p>IMDB score : <span id="movie-imdb-score"></span></p>
+            </div>
             <div class="modal-body">
+                <p><strong>Réalisé par :</strong> <span id="modal-directors"></span></p>
+                <p><span id="modal-description"></span></p>
                 <img id="modal-image" src="" alt="Image du film">
-                <h2 id="modal-title"></h2>
-                <p id="modal-description"></p>
-                <p><strong>Réalisateurs:</strong> <span id="modal-directors"></span></p>
-                <p><strong>Distribution:</strong> <span id="modal-cast"></span></p>
+                <p><strong>Avec :</strong> <span id="modal-cast"></span></p>
                 <button class="hide-on-mobile" id="close-modal">Fermer</button>
             </div>
         </div>

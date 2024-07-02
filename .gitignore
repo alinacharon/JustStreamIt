@@ -1,0 +1,5 @@
+.vscode/
+build/
+*.min.css
+*.min.js
+.DS_Store

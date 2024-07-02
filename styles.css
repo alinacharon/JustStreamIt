@@ -74,11 +74,10 @@ h2 {
 .show_best_movie {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; 
+    align-items: stretch;
     justify-content: space-between;
     padding: 20px;
     border: black solid 5px;
-
 }
 
 .movie img {
@@ -100,7 +99,7 @@ h2 {
 
 .movie-info h3 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-size: 48px;
 }
 .movie-info p {
@@ -140,6 +139,8 @@ button:hover {
 .movie-item {
     position: relative;
     overflow: hidden;
+    width: 250px;
+    height: 250px;
 }
 
 .movie-item img {
@@ -232,7 +233,6 @@ button:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .modal-body {
@@ -241,7 +241,7 @@ button:hover {
 
 .modal-body img {
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     margin-bottom: 20px;
 }
 
@@ -252,6 +252,9 @@ button:hover {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px;
+    width: 100px;
+    margin-left: 40%;
+    margin-top: 5%;
 }
 
 #close-modal:hover {
@@ -292,6 +295,7 @@ button:hover {
 
     .movie img {
         margin: 0 0 20px 0;
+        width: 150px;
     }
 
     .movie-info {
@@ -335,6 +339,9 @@ button:hover {
 @media (min-width: 600px) and (max-width: 1199px) {
     .movies-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .close-button {
+        display: none;
     }
 }
 
@@ -384,31 +391,38 @@ button:hover {
     font-size: 48px;
 }
 .modal-content {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     margin: 10% auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
-    position: relative;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    align-items: stretch
+    
 }
-
+.modal-body {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 100;
+}
+.modal-header {
+    margin-bottom: 40px;
+}
+.modal-actors p{
+    margin-top: 20px;
+}
 .modal-body img {
-    float: right;
+    position: absolute;
+    top: -200px;
+    right: 0;
     width: 150px;
-    margin-left: 20px;
-    border-radius: 8px;
 }
 
-.modal-body h2 {
-    margin-top: 0;
-}
-
-.modal-body p {
-    clear: both;
-}
 
 #close-modal:hover {
     background-color: #cc0000;
@@ -418,6 +432,10 @@ button:hover {
     .modal-content {
         max-width: 600px;
     }
+    .modal-cast {
+        margin-top: 20px;
+    }
+  
 }
 
 @media (max-width: 599px) {
@@ -434,18 +452,16 @@ button:hover {
     .modal-body{
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin-bottom: 20px;
         text-align: left;
         font-weight: 100;
     }
     .modal-body img {
+        position:initial;
         padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 10px;
         margin-left: 0;
         width: 90%;
-        
     }
     .modal-header {
      padding-bottom: 20px;
@@ -461,5 +477,7 @@ button:hover {
         font-size: 30px;
         text-align: left;
     }
-  
+    .modal-actors p{
+        margin-top: 0px;
+    }
 }

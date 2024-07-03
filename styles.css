@@ -65,6 +65,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 48px;
     font-weight: 600;
+    width: 60%;
 }
 
 .best-movie, .category, .other-categories {
@@ -107,10 +108,16 @@ h2 {
     font-weight: 100;
     font-size: 28px;
 }
-.details-button {
-    background-color: #ff0000;
-    width: 166px;
-    height: 48px;
+
+.pagination {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+button {
+    font-family: "Oswald", sans-serif;
     font-size: 24px;
     font-weight: 400;
     color: #fff;
@@ -119,9 +126,12 @@ h2 {
     cursor: pointer;
     border-radius: 15px;
     margin-top: auto;
-}
-button {
-    font-family: "Oswald", sans-serif;
+    background-color: #ff0000; /* Red background */
+    width: 166px;
+    height: 48px;
+    transition: background-color 0.3s;
+    position: relative;
+
 }
 
 button:hover {
@@ -130,7 +140,7 @@ button:hover {
 
 .movies-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     gap: 60px;
     justify-content: center;
     margin: 0 auto;
@@ -171,7 +181,7 @@ button:hover {
     border: none;
     border-radius: 8px;
     padding: 5px 10px;
-    margin-left: 70%;
+    margin-left: 40%;
     font-size: 16px;
     color: #fff;
     cursor: pointer;
@@ -189,27 +199,8 @@ button:hover {
     position: relative;
 }
 
-.arrow {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-    color:#cfc8c8;
-    width: 50px;
-    height: 50px;
-
-
-}
-
-.arrow.left {
-    position: absolute;
-    left: -30px;
-}
-
-.arrow.right {
-    position: absolute;
-    right: -30px;
+.description {
+    margin-top: 20px;
 }
 
 .modal {
@@ -243,17 +234,11 @@ button:hover {
     text-align: center;
 }
 
-.modal-body img {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 20px;
-}
 
 #close-modal {
     background-color: #ff0000;
     color: #fff;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px;
     width: 100px;
@@ -265,7 +250,7 @@ button:hover {
     background-color: #cc0000;
 }
 
-
+/* Phones */
 @media (max-width: 599px) {
     header {
         flex-direction: column;
@@ -286,7 +271,6 @@ button:hover {
     .show_best_movie {
         flex-direction: column;
         align-items: center;
-        width: 90%;
     }
     .movie-info h3 {
         margin-top: 10px;
@@ -309,14 +293,16 @@ button:hover {
     
     .movies-grid {
         grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
     }
 
-    .category h2  {
+    h2  {
         text-align: center;
+        position: relative;
+        width: 100%;
     }
-
-    .best-movie h2 {
-        text-align: center;
+    button {
+        margin-top: 20px;
     }
 
     .hide-on-mobile {
@@ -324,7 +310,7 @@ button:hover {
     }
     .close-button {
         position: absolute;
-        top:0px;
+        top:-3%;
         right: 20px;
         color: #c40f0f;
         float: right;
@@ -338,20 +324,25 @@ button:hover {
         text-decoration: none;
         cursor: pointer;
 }
+.category-menu {
+    width: 100%;
 }
-
+}
+/* Tablets */
 @media (min-width: 600px) and (max-width: 1199px) {
     .movies-grid {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
     .close-button {
         display: none;
     }
 }
-
+/* Desktops */
 @media (min-width: 1200px) {
     .movies-grid {
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
     }
     .close-button {
         display: none;
@@ -422,9 +413,10 @@ button:hover {
 }
 .modal-body img {
     position: absolute;
-    top: -200px;
+    top: -90%;
     right: 0;
     width: 150px;
+    height: 220;
 }
 
 

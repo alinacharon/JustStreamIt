@@ -30,68 +30,52 @@
                     <p id="best-movie-description">Description du Film</p>
                     
                 </div>
-                <button class="details-button", class="hide-on-mobile", id="best-movie-details-button"  >Détails</button>
-            </div>
-        </section>
-        <section class="category">
-            <h2>Mystery</h2>
-            <div class="category-wrapper">
-                <button class="arrow left" id="mystery-left-arrow">&#9664;</button>
-                <div class="movies-grid" id="mystery-movies-grid">
-                </div>
-                <button class="arrow right" id="mystery-right-arrow">&#9654;</button>
-            </div>
-        </section>
-      
-        <section class="category">
-            <h2>Action</h2>
-            <div class="category-wrapper">
-                <button class="arrow left" id="action-left-arrow">&#9664;</button>
-                <div class="movies-grid" id="action-movies-grid">
-                </div>
-                <button class="arrow right" id="action-right-arrow">&#9654;</button>
+                <button class="details-button" id="best-movie-details-button">Détails</button>
             </div>
         </section>
 
-        <section class="category">
-            <h2>Animation</h2>
-            <div class="category-wrapper">
-                <button class="arrow left" id="animation-left-arrow">&#9664;</button>
-                <div class="movies-grid" id="animation-movies-grid">
-                </div>
-                <button class="arrow right" id="animation-right-arrow">&#9654;</button>
-            </div>
-        </section>
-        <section class="other-categories">
-            <h2>Autres:</h2>
-            <select id="category-select">
-            </select>
-            <div class="category-wrapper">
-                <button class="arrow left" id="other-left-arrow">&#9664;</button>
-                <div class="movies-grid" id="other-movies-grid">
-                </div>
-                <button class="arrow right" id="other-right-arrow">&#9654;</button>
-            </div>
-        </section>
+        <h2> Films les mieux notés</h2>
+        <div id="best-movies-grid" class="movies-grid"></div>
+        <div id="best-pagination" class="pagination">
+            <button id="best-voir-plus">Voir plus</button>
+        </div>
+
+        <h2>Action</h2>
+        <div id="action-movies-grid" class="movies-grid"></div>
+        <div id="action-pagination" class="pagination">
+            <button id="action-voir-plus">Voir plus</button>
+        </div>
+
+        <h2>Animation</h2>
+        <div id="animation-movies-grid" class="movies-grid"></div>
+        <div id="animation-pagination" class="pagination">
+            <button id="animation-voir-plus">Voir plus</button>
+        </div>
+
+        <h2>Autres : </h2>
+        <select id="category-select"></select>
+        <div id="other-movies-grid" class="movies-grid"></div>
+        <div id="other-pagination" class="pagination">
+            <button id="other-voir-plus">Voir plus</button>
+        </div>
     </main>
     
     <div id="movie-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-           
-             <div class="modal-header">
-                 <h2 id="modal-title"></h2>
-                 <p><span id="movie-year"></span> - <span id="movie-genre"></span></p>
-                 <p><span id="movie-duration"></span> minutes (<span id="movie-countries"></span>)</p>
-                 <p>IMDB score : <span id="movie-imdb-score"></span></p>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <p><span id="movie-year"></span> - <span id="movie-genre"></span></p>
+                <p><span id="movie-duration"></span> minutes (<span id="movie-countries"></span>)</p>
+                <p>IMDB score : <span id="movie-imdb-score"></span></p>
             </div>
             <div class="modal-body">
                 <p><strong>Réalisé par :</strong> <span id="modal-directors"></span></p>
-                <p><span id="modal-description"></span></p>
+                <div class="description"><span id="modal-description"></span></p></div><p> 
                 <img id="modal-image" src="" alt="Image du film">
-            <div class="modal-actors">
-                <p><strong>Avec :</strong> <span id="modal-cast"></span></p>
-            </div>
+                <div class="modal-actors">
+                    <p><strong>Avec :</strong> <span id="modal-cast"></span></p>
+                </div>
                 <button class="hide-on-mobile" id="close-modal">Fermer</button>
             </div>
         </div>

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const API_MOVIE_URL = 'http://localhost:8000/api/v1/titles/';
     const API_CATEGORY_URL = 'http://localhost:8000/api/v1/genres/?'
     const NO_PICTURE_PATH = '/src/img/no-picture.jpg';
+ 
 
     //Open modal window
     function openModal(movieId) {
@@ -244,6 +245,6 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchCategories();
     loadBestMovie();
     loadBestMovies("best-movies-grid", "best-movies-pagination");
-    loadMoviesByCategory('Action', 'action-movies-grid', 'action-pagination');
-    loadMoviesByCategory('Animation', 'animation-movies-grid', 'animation-pagination');
+    loadMoviesByCategory('Fantasy', 'fantasy-movies-grid', 'fantasy-pagination');
+    loadMoviesByCategory('History', 'history-movies-grid', 'history-pagination');
 });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidéo à la Demande</title>
+    <title>JustStreamIt</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -36,28 +36,31 @@
 
         <h2> Films les mieux notés</h2>
         <div id="best-movies-grid" class="movies-grid"></div>
-        <div id="best-pagination" class="pagination">
-            <button id="best-voir-plus">Voir plus</button>
+        <div id="best-movies-pagination" class="pagination">
+            
         </div>
 
         <h2>Action</h2>
         <div id="action-movies-grid" class="movies-grid"></div>
         <div id="action-pagination" class="pagination">
-            <button id="action-voir-plus">Voir plus</button>
+            
         </div>
 
         <h2>Animation</h2>
         <div id="animation-movies-grid" class="movies-grid"></div>
         <div id="animation-pagination" class="pagination">
-            <button id="animation-voir-plus">Voir plus</button>
         </div>
 
-        <h2>Autres : </h2>
-        <select id="category-select"></select>
-        <div id="other-movies-grid" class="movies-grid"></div>
-        <div id="other-pagination" class="pagination">
-            <button id="other-voir-plus">Voir plus</button>
+        <section id="category-section">
+            <div class="showing-categories">
+                <h2>Autres</h2>
+            <select  id="category-dropdown"> 
+                <option value="" disabled selected>Sélectionner la catégorie</option>
+            </select>
         </div>
+            <div id="category-grid" class="movies-grid"></div>
+            <div id="category-pagination" class="pagination"></div>
+        </section>
     </main>
     
     <div id="movie-modal" class="modal">

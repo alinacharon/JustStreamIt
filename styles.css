@@ -65,7 +65,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 48px;
     font-weight: 600;
-    width: 60%;
+ 
 }
 
 .best-movie, .category, .other-categories {
@@ -87,10 +87,12 @@ h2 {
     margin-right: 20px;
 }
 .movie-title {
-    font-size: 24px;
     font-weight: 600;
     padding-right:  50%;
-}
+    font-size: 18px;
+    margin: 0 0 10px;
+    }
+
 
 .movie-info {
     flex-grow: 1;
@@ -140,12 +142,10 @@ button:hover {
 
 .movies-grid {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     gap: 60px;
     justify-content: center;
     margin: 0 auto;
 }
-
 .movie-item {
     position: relative;
     overflow: hidden;
@@ -171,10 +171,6 @@ button:hover {
     box-sizing: border-box;
 }
 
-.movie-title {
-    font-size: 18px;
-    margin: 0 0 10px;
-}
 
 .movie-item button {
     background-color: rgba(0, 0, 0, 0.7);
@@ -249,7 +245,26 @@ button:hover {
 #close-modal:hover {
     background-color: #cc0000;
 }
+#category-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    margin-left: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #000;
+}
 
+.showing-categories {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 80px;
+    align-items: baseline;
+}
 /* Phones */
 @media (max-width: 599px) {
     header {
@@ -295,7 +310,10 @@ button:hover {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
-
+    .movie-title {
+        font-size: 17px;
+        margin: 0;
+    }
     h2  {
         text-align: center;
         position: relative;
@@ -324,9 +342,19 @@ button:hover {
         text-decoration: none;
         cursor: pointer;
 }
-.category-menu {
-    width: 100%;
-}
+    .category-menu {
+        width: 100%;
+    }
+    .showing-categories {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 120px;
+        padding: 0;
+        width: 200px;
+    }
+    #category-dropdown {
+        font-size: 24px;
+    }
 }
 /* Tablets */
 @media (min-width: 600px) and (max-width: 1199px) {
@@ -477,3 +505,4 @@ button:hover {
         margin-top: 0px;
     }
 }
+

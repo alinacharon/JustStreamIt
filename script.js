@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch(`${API_MOVIE_URL}${movieId}`)
             .then(response => response.json())
             .then(data => {
-                document.getElementById('modal-image').src = data.image_url || NO_PICTURE_PATH;
+                const modalImage = document.getElementById('modal-image');
+                modalImage.src = data.image_url;
+                modalImage.onerror = () => {
+                    modalImage.src = NO_PICTURE_PATH;
+                };
                 document.getElementById('modal-title').textContent = data.title;
                 document.getElementById('movie-year').textContent = data.year;
                 document.getElementById('movie-genre').textContent = data.genres;
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const bestMovie = data.results[0];
                 const bestMovieId = bestMovie.id;
 
-                document.getElementById('best-movie-image').src = bestMovie.image_url || NO_PICTURE_PATH;
+                document.getElementById('best-movie-image').src = bestMovie.image_url;
                 document.getElementById('best-movie-title').textContent = bestMovie.title;
 
                 fetch(`${API_MOVIE_URL}${bestMovieId}`)
